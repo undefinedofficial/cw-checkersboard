@@ -1,1 +1,1 @@
-# cw-chessboard
+# cw-chekersboard
