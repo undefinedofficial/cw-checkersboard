@@ -1,0 +1,109 @@
+// @mixin chessboard-theme(
+//   $name,
+//   $coordinates-white,
+//   $coordinates-black,
+//   $coordinates-frame,
+//   $border,
+//   $default,
+//   $red,
+//   $green,
+//   $blue
+// ) {
+//   .chessboard.#{$name} {
+//     .border-inner {
+//       fill: none;
+//       stroke: $border;
+//       stroke-width: 0.5%;
+//     }
+//     .coordinates {
+//       pointer-events: none;
+//       user-select: none;
+
+//       .coordinate {
+//         fill: $coordinates-frame;
+//         cursor: default;
+//         text-transform: uppercase;
+//         text-shadow: 0 0 1px #000;
+//         &.black {
+//           fill: $coordinates-black;
+//           text-shadow: none;
+//         }
+//         &.white {
+//           fill: $coordinates-white;
+//           text-shadow: none;
+//         }
+//       }
+//     }
+//
+//   }
+// }
+
+@mixin checkersboard-theme(
+  $name,
+  $image,
+  $coords-white,
+  $coords-black,
+  $coords-frame,
+  $border,
+  $default,
+  $red,
+  $green,
+  $blue
+) {
+  .checkersboard-theme.#{$name} {
+    .cw-wrapper {
+      border-color: $border;
+    }
+    .cw-container {
+      &.outside {
+        border: 1px solid $coords-frame;
+      }
+      &::before {
+        content: " ";
+        background-color: #fff;
+
+        background-image: url(#{$image});
+      }
+      .markers {
+        font-size: initial;
+        .default {
+          stroke: $default;
+          fill: $default;
+        }
+        .red {
+          stroke: $red;
+          fill: $red;
+        }
+        .green {
+          stroke: $green;
+          fill: $green;
+        }
+        .blue {
+          stroke: $blue;
+          fill: $blue;
+        }
+      }
+    }
+
+    .checkersboard-coords .coords {
+      &:not(.outside) {
+        .coord {
+          &.white {
+            text-shadow: none;
+            color: $coords-white;
+          }
+          &.black {
+            text-shadow: none;
+            color: $coords-black;
+          }
+        }
+      }
+      .coord {
+        color: $coords-frame;
+        cursor: default;
+        text-transform: uppercase;
+        text-shadow: 0 0 1px #000;
+      }
+    }
+  }
+}

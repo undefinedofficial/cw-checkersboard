@@ -1,0 +1,63 @@
+{
+  "name": "cw-chessboard",
+  "description": "Simple and Fast Typescript Vue Chessboard from chesswood.online with more plugins",
+  "version": "0.8.0",
+  "files": [
+    "src/chessboard/*"
+  ],
+  "main": "src/chessboard/index.ts",
+  "scripts": {
+    "dev": "vite --host",
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "build": "run-s typecheck build:lib",
+    "clean": "rm -r ./dist",
+    "build:lib": "run-s build:es",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "build:es": "cross-env NODE_ENV=production vite build --mode production",
+    "lint": "run-s lint:style lint:lib",
+    "lint:style": "stylelint --fix \"src/**/*.scss\"",
+    "lint:lib": "eslint --fix \"src/**\" --ignore-pattern \"src/**/*.scss\"",
+    "format": "prettier --write src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/undefinedofficial/cw-chessboard.git"
+  },
+  "keywords": [
+    "chess",
+    "chesswood",
+    "chessboard",
+    "undefinedofficial"
+  ],
+  "author": "undefinedofficial",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/undefinedofficial/cw-chessboard/issues"
+  },
+  "homepage": "https://github.com/undefinedofficial/cw-chessboard#readme",
+  "devDependencies": {
+    "@tsconfig/node18": "^2.0.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.16.8",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue2": "^2.2.0",
+    "@vue/tsconfig": "^0.4.0",
+    "chess.ts": "^0.16.2",
+    "cross-env": "^7.0.3",
+    "minimist": "^1.2.8",
+    "npm-run-all": "^4.1.5",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "sass": "^1.62.1",
+    "typescript": "~5.0.4",
+    "vite": "^4.3.5",
+    "vite-plugin-dts": "^3.5.2",
+    "vue": "^3.3.2",
+    "vue-tsc": "^1.6.4",
+    "checkers-ts": "https://github.com/undefinedofficial/checkers-ts.git",
+    "checkers-ai": "https://github.com/undefinedofficial/checkers-ai.git"
+  },
+  "peerDependencies": {
+    "sass": "^1.62.1",
+    "vue": "^3.3.2"
+  }
+}

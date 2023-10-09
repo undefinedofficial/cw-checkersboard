@@ -1,0 +1,33 @@
+@mixin piece-theme($name, $wp, $wq, $bp, $bq) {
+  .pieces.#{$name} .piece {
+    &.wp {
+      background-image: url(#{$wp});
+    }
+    &.wq {
+      background-image: url(#{$wq});
+    }
+
+    &.bp {
+      background-image: url(#{$bp});
+    }
+    &.bq {
+      background-image: url(#{$bq});
+    }
+  }
+}
+
+/** TEMPLATE 
+@import "./piece-theme.scss";
+
+@include piece-theme(
+  "staunty",
+  // white pawn
+  "", 
+  // white queen
+  "", 
+  // black pawn
+  "", 
+  // black queen
+  "", 
+);
+*/
