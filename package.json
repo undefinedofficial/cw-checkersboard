@@ -1,11 +1,11 @@
 {
-  "name": "cw-chessboard",
+  "name": "cw-checkersboard",
   "description": "Simple and Fast Typescript Vue Chessboard from chesswood.online with more plugins",
   "version": "0.8.0",
   "files": [
-    "src/chessboard/*"
+    "src/checkersboard/*"
   ],
-  "main": "src/chessboard/index.ts",
+  "main": "src/checkersboard/index.ts",
   "scripts": {
     "dev": "vite --host",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
@@ -21,20 +21,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/undefinedofficial/cw-chessboard.git"
+    "url": "git+https://github.com/undefinedofficial/cw-checkersboard.git"
   },
   "keywords": [
-    "chess",
+    "checkers",
     "chesswood",
-    "chessboard",
+    "checkersboard",
     "undefinedofficial"
   ],
   "author": "undefinedofficial",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/undefinedofficial/cw-chessboard/issues"
+    "url": "https://github.com/undefinedofficial/cw-checkersboard/issues"
   },
-  "homepage": "https://github.com/undefinedofficial/cw-chessboard#readme",
+  "homepage": "https://github.com/undefinedofficial/cw-checkersboard#readme",
   "devDependencies": {
     "@tsconfig/node18": "^2.0.1",
     "@types/minimist": "^1.2.2",
