@@ -101,7 +101,7 @@ import {
   Checkersboard,
   CheckersboardMarkers,
   CheckersboardControl,
-} from "cw-chessboard/index";
+} from "./checkersboard/index";
 
 import { Checkers, type PieceSymbol, type Move } from "checkers-ts";
 import { CheckersAI } from "checkers-ai";
