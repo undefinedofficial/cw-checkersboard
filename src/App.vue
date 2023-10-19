@@ -107,7 +107,7 @@ import { Checkers, type PieceSymbol, type Move } from "checkers-ts";
 import { CheckersAI } from "checkers-ai";
 
 const boards = ["default", "blue", "green", "sport", "wood_light"];
-const pieces = ["default", "staunty", "stock"];
+const pieces = ["default", "china", "diagram"];
 
 const boardPack = ref("default");
 const piecesPack = ref("default");
