@@ -69,7 +69,7 @@ const props = withDefaults(
 );
 const wrapper = ref<HTMLElement | null>(null);
 const checkersboard = ref<HTMLElement | null>(null);
-const { brdSize, ratioSize } = useRescale(wrapper);
+const { brdSize, ratioSize, Rescale } = useRescale(wrapper);
 
 const boardSize = computed(() => `${brdSize.value}px`);
 const boardRoundScale = computed(() => `${props.roundSize * ratioSize.value}px`);
@@ -93,6 +93,10 @@ provide("orientation", color);
 provide("pieces", pieces);
 provide("boardPack", boardPack);
 provide("piecePack", piecePack);
+
+defineExpose({
+  Rescale,
+});
 </script>
 
 <style lang="scss">
